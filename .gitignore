@@ -1,0 +1,11 @@
+# Processing exports
+application.*/
+windows-amd64/
+windows64/
+macos-*/
+linux-*/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
