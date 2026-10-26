@@ -10,7 +10,7 @@ Every particle moves back and forth along a straight line from the center, and t
 
 When a particle crosses the base circle, it plays its note. Most of the time the notes are scattered into rhythms. Every so often groups of them line up and play together as evenly spaced chords: whole-tone scales, diminished and augmented chords, octaves. Eventually every note lines up again into one big cluster, and the cycle starts over.
 
-It works a lot like a [Whitney Music Box](https://en.wikipedia.org/wiki/John_Whitney_(animator)).
+It works a lot like a Whitney Music Box.
 
 ## The versions
 
@@ -26,17 +26,6 @@ Each version is its own sketch. They're kept side by side so you can see how the
 | `musicalCircle_004_3` | Octave experiment: two knobs, OCT LOW and OCT HIGH, that click between octaves. |
 | `musicalCircle_004_4` | Octave experiment: 8 toggles, any combination of octaves on or off. |
 | `musicalCircle_005` | The ring from 4.2 with the on/off toggles from 4.4: click a piece of the ring to turn that octave on or off, or drag across pieces. Turning octaves on or off, or changing the root, doesn't restart the motion. New particles appear where they would have been all along. Changing the scale still starts the cycle again. The circle is bigger, in its own square. |
-
-`musicalCircle_005` is the latest version.
-
-### Controls
-
-From `musicalCircle_002` on:
-
-- **0–7**: pick the scale (0 is chromatic, 1–7 are the modes)
-- **LEFT / RIGHT**: move the root down or up a semitone
-
-From `musicalCircle_003` on, the same things can be done with the GUI. The SPEED knob goes from 10 times slower to 10 times faster, and the middle is the original speed.
 
 ## Setup
 
@@ -57,21 +46,7 @@ The sketch sends MIDI to a virtual port, and your music software listens to it.
 
 On macOS and Linux the port has a different name. The sketch prints the available ports when it starts (`MidiBus.list()`). Copy the name you want into the `new MidiBus(...)` line in `setup()`.
 
-### 3. Music software
-
-I used Ableton Live. Open *Preferences → Link, Tempo & MIDI* and turn on **Track** input for the virtual port. Then set a MIDI track's input to the port and its monitor to **In**. A piano or any sound with a short release works well.
-
-Because the output is plain MIDI, any DAW or synth that accepts MIDI input works too.
-
-### 4. Run
-
-Open a sketch folder in Processing and press Run.
-
-The sketch sends a note-off whenever a particle moves away from the circle. If you stop it while notes are playing, those notes can stay on in your music software. Turn the track's input off and on again to clear them.
-
 ## Notes
-
-The original sketch is from 2021. The later versions and the comments were made in 2026 with the help of AI.
 
 The pixel font *standard 07_58* in the `data` folders belongs to its author and isn't covered by this project's license.
 
