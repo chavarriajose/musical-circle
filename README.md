@@ -1,7 +1,5 @@
 # Musical Circle
 
-by Jose Chavarría. 2021
-
 A generative music sketch made in [Processing](https://processing.org). Particles move around a circle, and every time one crosses it, it plays a note. The notes go out as MIDI to any music software.
 
 ## How it works
